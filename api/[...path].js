@@ -15,7 +15,7 @@ async function getRawBody(req) {
 
 export default async function handler(req, res) {
   const urlParts = req.url.split('?');
-  const pathPart = urlParts[0].replace(/^\\/api\\//, '');
+  const pathPart = urlParts[0].replace('/api/', '');
   const queryString = urlParts[1] ? `?${urlParts[1]}` : '';
   const targetUrl = `http://asl-translator-env.eba-minxz3t8.us-east-2.elasticbeanstalk.com/${pathPart}${queryString}`;
 
