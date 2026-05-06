@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "http://asl-translator-env.eba-minxz3t8.us-east-2.elasticbeanstalk.com/:path*"
+      "source": "/((?!api).*)",
+      "destination": "/index.html"
     }
   ]
 }
